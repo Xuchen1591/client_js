@@ -2,14 +2,28 @@
 <html>
 <head lang="en">
     <style>
-        .reveal * {
+        .reveal *{
             display: none;
         }
-        .reveal *.handle{
+        .reveal *.handle {
             display: block;
         }
+
+
+        #clock{
+            font: bold 24pt sans;
+            background: #ddf;
+            padding: 10px;
+            border: solid black 2px;
+            border-radius: 10px;
+        }
     </style>
+
+
+
     <script>
+        //js for hiden
+        /*
         window.onload = function() {
             var elements = document.getElementsByClassName("reveal");
             for (var i= 0;i<elements.length;i++){
@@ -26,6 +40,7 @@
                 }
             }
         }
+        */
     </script>
     <meta charset="UTF-8">
     <title></title>
@@ -34,6 +49,23 @@
 <div class="reveal">
     <h1 class="handle">Click here to Reveal Hidden Text</h1>
     <p>this paragraph is hidden, it's appears when you click on the title.</p>
+    <br>
+
+</div>
+<div>
+    <h1>Digital clock</h1>
+    <span id="clock"></span>
+    <script>
+        //js for clock
+        function displayTime() {
+            var elt = document.getElementById("clock");
+            var now = new Date();
+            //alert(now.toLocaleTimeString());
+            elt.innerHTML = now.toLocaleTimeString();
+            setTimeout(displayTime,1000);
+        }
+        window.onload = displayTime();
+    </script>
 </div>
 </body>
 </html>
