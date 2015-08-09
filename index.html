@@ -102,6 +102,13 @@
             //var str = String(bro);
             b.innerHTML = bro.toString();
         }
+
+
+        do{
+            var name = prompt("What's your name? ");    //return type: String
+            var correct = confirm("You entered:" + name + ".\n");   //return type: Bool
+        }while(!correct);
+        alert("Hello, " + name);
     </script>
 </div>
 </body>
