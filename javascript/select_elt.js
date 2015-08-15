@@ -38,6 +38,15 @@ var firstParaSpans = firstpara.getElementsByTagName("span");
 
 
 
+//select by className
+var warnings = document.getElementsByClassName("warning");
+var log = document.getElementById("log");
+var fatal = log.getElementsByClassName("fatal error");
 
 
+//document.all[]
+//all element in document
+document.all[0];    //first ele in doc
+document.all["navbar"];     //navbar(s) in doc, equals to document.all.navbar
+document.all.tags("div");   //all div tags in doc
 
